@@ -11,6 +11,11 @@
       <td><%= a.id %></td>
       <td><%= a.title %></td>
       <td><%= a.description %></td>
+      <td><%= button_to "Edit the article", edit_article_path(a), :method => :get %></td>
+      <td><%= button_to "Delete the article", article_path(a), :method => :delete, data:{confirm: "Are you sure?"} %></td>
+      <td><%= button_to "Show the article", article_path(a), :method => :get %></td>
     </tr>
   <% end %>
 </table>
+
+<%= button_to "Add new article", new_article_path, :method => :get %>

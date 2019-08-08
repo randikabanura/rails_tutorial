@@ -2,4 +2,5 @@
 
 <p>Title: <%= @article.title %></p>
 <p>Description: <%= @article.description %></p>
-<%= button_to "Show all articles", articles_path %>
+<%= button_to "Edit the article", edit_article_path(@article), :method => :get %><br>
+<%= button_to "Show all articles", articles_path, :method => :get %>
